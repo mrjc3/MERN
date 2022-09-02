@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import PersonCard from './components/PersonCard.js';
+import PersonCardFunctionalComponent from "./components/PersonCardFunctionalComponent"
 
 var peopleArr =[
   {"firstName":"Jane", "lastName":"Doe", "age":45, "hairColor":"Black"},
@@ -13,9 +14,8 @@ var peopleArr =[
 function App() {
   return (
     <div className="App">
-      {peopleArr.map(person => {
-        return <PersonCard firstName={person.firstName} lastName={person.lastName}
-        age={person.age} hairColor={person.hairColor} />
+      {peopleArr.map((person, i) => {
+        return <PersonCardFunctionalComponent key ={i} person={person} />
       })
       }
     </div>
