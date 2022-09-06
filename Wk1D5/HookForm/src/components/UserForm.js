@@ -95,7 +95,7 @@ const UserForm = (props) => {
     // -------------------- JSX return ----------------------------------------
 
     return (
-        <div className='container'>
+        <div className="container">
             <form onSubmit={createUser}>
                 <div>
                     <label>First Name: </label>
