@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:number" element={<Number />} />
-        <Route path="/:word" element={<AnyWord />} />
+        {/* <Route path="/:word" element={<AnyWord />} /> */}
         <Route path="/:word/:wordColor/:backgroundColor" element={<MultipleWords />} />
       </Routes>
     </div>
