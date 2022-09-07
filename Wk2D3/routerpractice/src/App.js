@@ -1,16 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home.js'
-import About from './components/About.js'
+import Home from './components/Home.js';
+import Number from './components/Number.js';
+import AnyWord from './components/AnyWord';
+import MultipleWords from './components/MultipleWords';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Routing Example</h1>
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/:number" element={<Number />} />
+        <Route path="/:word" element={<AnyWord />} />
+        <Route path="/:word/:wordColor/:backgroundColor" element={<MultipleWords />} />
       </Routes>
     </div>
   );
