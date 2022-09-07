@@ -40,7 +40,6 @@ function orderedIntersection(sortedA, sortedB) {
         if(sortedA.includes(sortedB[0])) {
             newArr.push(sortedB.shift())
             
-
         } else {
             sortedB.shift();
         }
