@@ -18,11 +18,15 @@ export default () => {
         setProducts([...products, productFromForm])
     }
 
+    const removeFromDom = (productId) => {
+        setProducts(products.filter(product => product._id != productId));
+    }
+
     return (
         <div>
             <ProductForm addNewProduct={addNewProduct}/>
             <hr />
-            {loaded && <ProductList products={products}/>}
+            {loaded && <ProductList products={products} removeFromDom={removeFromDom}/>}
         </div>
     )
 };
